@@ -1,5 +1,6 @@
 import { Column, DataType, ForeignKey, HasOne, Model, Table } from 'sequelize-typescript';
 import { Category } from 'src/categories/category.entity';
+import { Stock } from 'src/stocks/stock.entity';
 
 @Table
 export class Product extends Model {
@@ -24,4 +25,7 @@ export class Product extends Model {
     
     @Column({ type: DataType.INTEGER, allowNull: false })
     status: number;
+
+    @HasOne(() => Stock, 'productId')
+    stock: Stock;
 }
