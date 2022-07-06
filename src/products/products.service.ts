@@ -1,6 +1,7 @@
 import { Injectable, Inject, HttpException, HttpStatus } from '@nestjs/common';
 import { Product } from './product.entity';
 import { UpdateProductDto } from './dto/update-product.dto';
+import { StocksService } from 'src/stocks/stocks.service';
 import { CategoriesService } from 'src/categories/categories.service';
 
 @Injectable()
@@ -8,6 +9,7 @@ export class ProductsService {
     constructor(
         @Inject('PRODUCTS_REPOSITORY')
         private productsRepository: typeof Product,
+        private stockService: StocksService,
         private categoriesService: CategoriesService,
     ) {}
     
@@ -28,6 +30,7 @@ export class ProductsService {
     async create(createProductDto: any): Promise<Product> {
         await this.categoriesService.findOne(createProductDto.categoryId);
         const product = await this.productsRepository.create(createProductDto);
+        this.stockService.create(product);
         return product;
     }
 
