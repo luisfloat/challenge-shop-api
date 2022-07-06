@@ -1,4 +1,7 @@
 import { Sequelize } from 'sequelize-typescript';
+import { Category } from 'src/categories/category.entity';
+import { Product } from 'src/products/product.entity';
+import { Stock } from 'src/stocks/stock.entity';
 
 export const databaseProviders = [
     {
@@ -14,6 +17,7 @@ export const databaseProviders = [
                 logging: false,
             });
 
+            sequelize.addModels([Category, Product, Stock]);
             await sequelize.sync();
             return sequelize;
         },
