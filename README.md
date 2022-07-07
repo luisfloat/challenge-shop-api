@@ -38,6 +38,8 @@ $ npm run test
 
 ### Resource Changes
 
+Some column names was translated to English, you can verify the changes here:
+
 #### Categories
 
 | Column | Type    | Description                | OG Column
