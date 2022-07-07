@@ -1,4 +1,4 @@
-# Multiplier-NodeJS-Challenge
+# Challenge-Sum
 
 ## Description
 
