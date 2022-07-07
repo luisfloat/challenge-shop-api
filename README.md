@@ -34,13 +34,48 @@ $ npm run start:prod
 $ npm run test
 ```
 
+---
+
 ## Documentation
+
+Some app information was translated to English, you can verify the changes here:
+
+### Endpoint Changes
+
+#### **Categories**
+
+Method   | Endpoint         | Description
+---------|------------------|-------------------------
+[GET] 	 | /categories 		| Find all *categories*
+[GET] 	 | /categories/:id 	| Find one *category* by *id*
+[POST] 	 | /categories 		| Create a *category*
+[PATCH]  | /categories/:id 	| Update *category*
+[DELETE] | /categories/:id	| Remove a *category* (it should *set null* to *product* *categoryId* on delete)
+
+#### **Products**
+
+Method   | Endpoint         | Description
+---------|------------------|-------------------------
+[GET] 	 | /products 		| Find all *products*
+[GET] 	 | /products/:id    | Find one *product* by *id*
+[POST] 	 | /products 		| Create a *product*
+[PATCH]  | /products/:id    | Update a *product*
+[DELETE] | /products/:id    | Remove a *product* (it should remove the *stock*)
+
+- It should create a stock to respective product when it was created.
+- Stock-Product has One-One Association.
+
+#### **Stock**
+
+Method   | Endpoint         | Description
+---------|------------------|-------------------------
+[GET] 	 | /products/:id/stock | Find all stock by respective *product* *id*.
+[PATCH]  | /products/:id/stock | Update a stock by respective *product* *id*.
+[DELETE] | /products/:id/stock | It should return status [501] - Not Implemented. (can't delete a stock)
 
 ### Resource Changes
 
-Some column names was translated to English, you can verify the changes here:
-
-#### Categories
+#### **Categories**
 
 | Column | Type    | Description                | OG Column
 |--------|---------|----------------------------|--------|
@@ -49,7 +84,7 @@ Some column names was translated to English, you can verify the changes here:
 | title  | varchar | Category title             | titulo
 | status | int     | 0 - Inactive, 1 - Active   | status
 
-#### Products
+#### **Products**
 
 | Column      | Type    | Description              | OG Column
 |-------------|---------|--------------------------|-------|
@@ -61,7 +96,7 @@ Some column names was translated to English, you can verify the changes here:
 | price       | decimal | Product price         | valor
 | status      | int     | 0 - Inactive, 1 - Active   | status
 
-#### Stock
+#### **Stock**
 
 | Column     | Type    | Description                | OG Column
 |------------|---------|--------------------------|-------|
@@ -75,6 +110,8 @@ Some column names was translated to English, you can verify the changes here:
 
 The backup is done automatically from MySQL to PostgreSQL every 10 seconds.
 Don't forget to verify the *dotenv* PostgreSQL variables.
+
+---
 
 ## Author
 
