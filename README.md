@@ -1,4 +1,4 @@
-# Challenge-Sum
+# minishop-nest
 
 ## Description
 
