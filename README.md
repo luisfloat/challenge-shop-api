@@ -2,7 +2,7 @@
 
 ## Description
 
-Luis F's NodeJS integration challenge to <a href="http://multiplier.com.br" target="_blank">Multiplier</a>
+It is a backend application with minimal shop REST API and database backup module.
 
 ### Technologies
 

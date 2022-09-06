@@ -1,7 +1,7 @@
 {
   "name": "minishop-nest",
   "version": "0.1.0",
-  "description": "Luis F's NodeJS integration challenge to Multiplier.",
+  "description": "Backend application with minimal shop REST API and database backup module.",
   "author": "",
   "private": true,
   "license": "UNLICENSED",
