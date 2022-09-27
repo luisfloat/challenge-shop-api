@@ -67,8 +67,8 @@ Method   | Endpoint         | Description
 
 Method   | Endpoint         | Description
 ---------|------------------|-------------------------
-[GET] 	 | /products/:id/stock | Find all stock by respective *product* *id*.
-[PATCH]  | /products/:id/stock | Update a stock by respective *product* *id*.
+[GET] 	 | /products/:id/stock | Find the stock by associated *product* *id*.
+[PATCH]  | /products/:id/stock | Update the stock by associated *product* *id*.
 [DELETE] | /products/:id/stock | It should return status [501] - Not Implemented. (can't delete a stock)
 
 ### Backup
