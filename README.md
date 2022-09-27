@@ -13,32 +13,23 @@ It is a backend application with minimal shop REST API and database backup modul
 ## Installation
 
 ```bash
-$ npm install
-```
-
-## Running the app
-
-```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
-```
-
-## Testing
-
-```bash
-# testing
-$ npm run test
+git clone https://github.com/luisfloat/minishop-nest.git
+npm install
+npm run start
 ```
 
 ---
 
 ## Documentation
+
+### Scripts
+
+Name | Script | Description
+-----|---------|-----------------
+`build` | `npm run build` | Build app
+`start` | `npm run start` | Start app
+`start:dev` | `npm run start` | Start app in development mode
+`start:prod` | `npm run start` | Start app in production mode
 
 ### Endpoint
 
