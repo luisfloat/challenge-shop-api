@@ -38,9 +38,7 @@ $ npm run test
 
 ## Documentation
 
-Some app information was translated to English, you can verify the changes here:
-
-### Endpoint Changes
+### Endpoint
 
 #### **Categories**
 
@@ -72,39 +70,6 @@ Method   | Endpoint         | Description
 [GET] 	 | /products/:id/stock | Find all stock by respective *product* *id*.
 [PATCH]  | /products/:id/stock | Update a stock by respective *product* *id*.
 [DELETE] | /products/:id/stock | It should return status [501] - Not Implemented. (can't delete a stock)
-
-### Resource Changes
-
-#### **Categories**
-
-| Column | Type    | Description                | OG Column
-|--------|---------|----------------------------|--------|
-| id     | int     | Table primary key          | id
-| slug   | varchar | Category code              | codigo
-| title  | varchar | Category title             | titulo
-| status | int     | 0 - Inactive, 1 - Active   | status
-
-#### **Products**
-
-| Column      | Type    | Description              | OG Column
-|-------------|---------|--------------------------|-------|
-| id          | int     | Table primary key | id
-| categoryId | int     | Category foreign key     | idCategoria
-| sku      | varchar | Product SKU           | codigo
-| name        | varchar | Product name          | nome
-| description   | text    | Product description     | descricao
-| price       | decimal | Product price         | valor
-| status      | int     | 0 - Inactive, 1 - Active   | status
-
-#### **Stock**
-
-| Column     | Type    | Description                | OG Column
-|------------|---------|--------------------------|-------|
-| id         | int     | Table primary key | id
-| productId  | int     | Product foreign key       | idProduto
-| qty | int     | Stock quantity    | quantidade
-| reserve    | int     | Reserve     | reserva
-| status     | int     | 0 - Inactive, 1 - Active   | status
 
 ### Backup
 
