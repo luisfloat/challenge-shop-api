@@ -9,10 +9,10 @@ export const databaseProviders = [
         useFactory: async () => {
             const sequelize = new Sequelize({
                 dialect: 'mysql',
-                host: process.env.HOST,
-                port: parseInt(process.env.PORT),
-                username: process.env.USERNAME,
-                password: process.env.PASSWORD,
+                host: process.env.HOST_MYSQL,
+                port: parseInt(process.env.PORT_MYSQL),
+                username: process.env.USERNAME_MYSQL,
+                password: process.env.PASSWORD_MYSQL,
                 database: 'nest',
                 logging: false,
             });
