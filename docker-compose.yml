@@ -1,0 +1,21 @@
+version: "3.1"
+
+services:
+  mysql:
+    container_name: minishop-mysql
+    image: mysql
+    restart: always
+    environment: 
+      MYSQL_DATABASE: nest
+      MYSQL_ROOT_PASSWORD: password
+    ports:
+      - "3306:3306"
+  pg:
+    container_name: minishop-pg
+    image: postgres
+    restart: always
+    environment: 
+      POSTGRES_DB: nest
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5432:5432"
