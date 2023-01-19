@@ -15,7 +15,7 @@ It is a backend application with minimal shop REST API and database backup modul
 ## Installation
 
 ```bash
-git clone https://github.com/luisfloat/minishop-nest.git
+git clone https://github.com/luisfloat/minishop-api.git
 npm install
 docker compose up -d
 npm run start
