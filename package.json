@@ -1,5 +1,5 @@
 {
-  "name": "minishop-nest",
+  "name": "minishop-api",
   "version": "0.1.0",
   "description": "Backend application with minimal shop REST API and database backup module.",
   "author": "",
@@ -13,7 +13,9 @@
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
-    "lint": "eslint \"{src,apps,libs}/**/*.ts\" --fix"
+    "lint": "eslint \"{src,apps,libs}/**/*.ts\" --fix",
+    "up": "sudo docker compose up -d",
+    "down": "sudo docker compose down"
   },
   "dependencies": {
     "@nestjs/common": "^8.0.0",
@@ -28,6 +30,9 @@
     "rxjs": "^7.2.0"
   },
   "devDependencies": {
+    "@adminjs/express": "^5.0.1",
+    "@adminjs/nestjs": "^5.0.1",
+    "@adminjs/sequelize": "^3.0.0",
     "@nestjs/cli": "^8.0.0",
     "@nestjs/schematics": "^8.0.0",
     "@nestjs/sequelize": "^8.0.1",
@@ -37,6 +42,8 @@
     "@types/sequelize": "^4.28.13",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
     "@typescript-eslint/parser": "^5.0.0",
+    "adminjs": "^6.6.4",
+    "chroma-js": "^2.4.2",
     "eslint": "^8.0.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
