@@ -1,36 +1,57 @@
-# Minishop
+# Challenge: Simple Shop Backend with Database Redundancy
 
-It is a backend application with minimal shop REST API and database backup module.
+This project is a backend application developed as a challenge to create a simple shop RESTful API with a database backup module.
 
-### Technologies
+## Features
 
-* **Node.js** as JavaScript runtime environment;
-* **TypeScript** as programming language;
-* **NestJS** as back-end framework;
-* **Sequelize** as ORM;
-* **MySQL** as RDBMS for the main data;
-* **PostgreSQL** as RDBMS for the backups;
-* **Docker** for RDBMS containers.
+- **API Endpoints**: Implements various RESTful endpoints for managing categories, products, and stock.
+- **Backup**: Utilizes database backups for data redundancy, automatically backing up MySQL to PostgreSQL.
 
-## Installation
+## Development Setup
+
+### Prerequisites
+
+* Node.js, NPM and Docker installed on your system.
+
+### Installation
 
 ```bash
-git clone https://github.com/luisfloat/minishop-api.git
+git clone https://github.com/luisfuturist/challenge-shop-nest.git
 npm install
 docker compose up -d
 npm run start
 ```
 
-## Usage
+### Scripts
 
-Name | Script | Description
------|---------|-----------------
-`build` | `npm run build` | Build app
-`start` | `npm run start` | Start app
-`start:dev` | `npm run start:dev` | Start app in development mode
-`start:prod` | `npm run star:prod` | Start app in production mode
+Script | Description
+---------|-----------------
+`npm run build` | Builds the application for production.
+`npm run start` | Starts the application in development mode.
+`npm run start:dev` | Starts the application in development mode with live-reload.
+`npm run star:prod` | Starts the application in production mode.
+`npm run lint` | Runs code linting to identify potential errors and style issues.
+`npm run up` | Runs database docker containers
+`npm run down` | Stops database docker containers
 
 ---
+
+## Technology Stack
+
+- **Backend:**
+  - **Node.js:** JavaScript runtime environment.
+  - **NestJS:** A framework for building efficient, scalable server-side applications.
+- **Database:**
+  - **MySQL:** Open-source relational database management system.
+  - **PostgreSQL:** Powerful, open-source object-relational database system.
+  - **Sequelize:** Promise-based Node.js ORM for PostgreSQL, MySQL, MariaDB, SQLite, and Microsoft SQL Server.
+- **Development Tools:**
+  - **eslint:** Pluggable linting utility for JavaScript and TypeScript code.
+  - **prettier:** Opinionated code formatter that automatically formats code according to predefined rules.
+  - **TypeScript:** Typed superset of JavaScript that compiles to plain JavaScript.
+  - **NestJS CLI:** Command-line interface tool for NestJS applications.
+- **Containerization:**
+  - **Docker:** Containerization platform used to manage MySQL and PostgreSQL databases, simplifying deployment and ensuring consistency across environments.
 
 ## Documentation
 
@@ -69,11 +90,4 @@ Method   | Endpoint         | Description
 
 ### Backup
 
-The backup is done automatically from MySQL to PostgreSQL every 10 seconds.
-Don't forget to verify the *dotenv* PostgreSQL variables.
-
----
-
-## Author
-
-<a href="https://twitter.com/luisfloat"><img src="https://img.shields.io/badge/-Twitter-333333?style=flat-square&amp;logo=twitter" alt="Twitter"/></a> <a href="https://github.com/luisfloat"><img src="https://img.shields.io/badge/-GitHub-333333?style=flat-square&amp;logo=github" alt="GitHub"/></a> <a href="https://instagram.com/luisfloat"><img src="https://img.shields.io/badge/-Instagram-333333?style=flat-square&amp;logo=instagram" alt="Instagram"/></a> <a href="mailto:contact@luisfloat.com"><img src="https://img.shields.io/badge/-Gmail-333333?style=flat-square&amp;logo=gmail" alt="Gmail"/></a>
+The application automatically backs up the MySQL database to PostgreSQL every 10 seconds. Ensure you have configured the necessary environment variables for the PostgreSQL connection in your `.env` file.

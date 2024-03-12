@@ -1,10 +1,7 @@
 {
-  "name": "minishop-api",
+  "name": "challenge-shop-nest",
   "version": "0.1.0",
-  "description": "Backend application with minimal shop REST API and database backup module.",
-  "author": "",
   "private": true,
-  "license": "UNLICENSED",
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",
